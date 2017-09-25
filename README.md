@@ -8,7 +8,7 @@ Running this microservice you won't need a backend solely to get some meta infor
 
 Your own `micro-open-graph` is one click away:
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/withspectrum/micro-open-graph)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/PjpG/micro-open-graph)
 
 You can also deploy with a single command from the terminal (assuming you have [`now`](https://now.sh) installed):
 
