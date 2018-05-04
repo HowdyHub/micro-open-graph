@@ -5,6 +5,10 @@ const cache = require('memory-cache')
 
 const TWENTY_FOUR_HOURS = 86400000
 
+const stripHtmlFrom = (content) => {
+  return content.replace(/<(?:.|\n)*?>/gm, '');
+}
+
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
@@ -18,6 +22,7 @@ module.exports = async (req, res) => {
   let statusCode, data
   try {
     data = await scrapeUrl(url)
+    data.description = stripHtmlFrom(data.description)
     statusCode = 200
   } catch (err) {
     console.log(err)
